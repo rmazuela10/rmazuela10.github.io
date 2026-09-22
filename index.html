@@ -18,19 +18,21 @@ body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-ser
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .mono{font-family:"JetBrains Mono",monospace}
-nav{position:sticky;top:0;z-index:10;background:rgba(11,15,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;max-width:1000px;margin:auto}
-nav .logo{font-weight:700;color:var(--text)}
+nav{position:fixed;left:0;top:0;bottom:0;width:230px;z-index:10;background:var(--bg2);border-right:1px solid var(--line);padding:36px 24px;display:flex;flex-direction:column}
+nav .logo{font-weight:700;font-size:22px;color:var(--text);margin-bottom:6px}
 nav .logo span{color:var(--accent)}
-nav ul{display:flex;gap:22px;list-style:none;font-size:14px}
-nav ul a{color:var(--muted)}
-nav ul a:hover{color:var(--accent);text-decoration:none}
+nav .sub{color:var(--muted);font-size:12.5px;margin-bottom:36px;line-height:1.4}
+nav ul{list-style:none;display:flex;flex-direction:column;gap:4px;font-size:14.5px}
+nav ul a{display:block;color:var(--muted);padding:8px 12px;border-left:2px solid transparent;border-radius:0 6px 6px 0;transition:.2s}
+nav ul a:hover,nav ul a.active{color:var(--accent);background:rgba(79,209,197,.07);border-left-color:var(--accent);text-decoration:none}
+nav .foot{margin-top:auto;font-size:12px;color:var(--muted)}
+body{padding-left:230px}
 main{max-width:1000px;margin:auto;padding:0 20px}
-.hero{min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:60px 0}
+.hero{display:flex;flex-direction:column;justify-content:center;padding:110px 0 70px}
 .hero .hi{color:var(--accent);font-size:15px;margin-bottom:12px}
 .hero h1{font-size:clamp(36px,7vw,64px);line-height:1.1;font-weight:700}
 .hero h2{font-size:clamp(20px,3.5vw,32px);color:var(--muted);font-weight:500;margin-top:10px}
-.hero p{max-width:620px;color:var(--muted);margin-top:24px}
+.hero p{max-width:640px;color:var(--muted);margin-top:20px;font-size:18px}
 .btns{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
 .btn{border:1px solid var(--accent);color:var(--accent);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:.2s}
 .btn:hover{background:rgba(79,209,197,.1);text-decoration:none}
@@ -76,34 +78,36 @@ section{padding:80px 0;border-top:1px solid var(--line)}
 footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px;border-top:1px solid var(--line)}
 .reveal{opacity:0;transform:translateY(20px);transition:.7s}
 .reveal.show{opacity:1;transform:none}
-@media(max-width:700px){nav ul{display:none}section{padding:60px 0}}
+@media(max-width:800px){body{padding-left:0}nav{position:sticky;bottom:auto;width:auto;flex-direction:row;align-items:center;padding:12px 16px;border-right:0;border-bottom:1px solid var(--line);overflow-x:auto;gap:12px}nav .logo{margin:0}nav .sub,nav .foot{display:none}nav ul{flex-direction:row;gap:2px;font-size:13px;white-space:nowrap}nav ul a{border-left:0;border-radius:6px;padding:6px 10px}section{padding:60px 0}}
 </style>
 </head>
 <body>
 
-<nav><div class="wrap">
+<nav>
   <a href="#" class="logo">RM<span>.</span></a>
+  <div class="sub">Ramón Mazuela Barría<br>Ingeniero Comercial</div>
   <ul>
     <li><a href="#sobre-mi">Sobre mí</a></li>
     <li><a href="#experiencia">Experiencia</a></li>
     <li><a href="#formacion">Formación</a></li>
     <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#actividades">Actividades</a></li>
     <li><a href="#habilidades">Habilidades</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
-</div></nav>
+  <div class="foot mono">rmazuela10.github.io</div>
+</nav>
 
 <main>
 <header class="hero">
   <div class="hi mono">Hola, mi nombre es</div>
   <h1>Ramón Mazuela Barría</h1>
-  <h2>Ingeniero Comercial · Finanzas & Macroeconomía</h2>
-  <p>Ingeniero Comercial. Mención Ciencias Económicas en la Facultad de Economía y Negocios de la Universidad de Chile. Minor en Macrofinanzas y Banca.</p>
+  <p>Ingeniero Comercial, Mención Ciencias Económicas en la Facultad de Economía y Negocios de la Universidad de Chile. Minor en Macrofinanzas y Banca.</p>
 </header>
 
 <section id="sobre-mi" class="reveal">
   <div class="title"><span class="n mono">01.</span>Sobre mí</div>
-  <p style="color:var(--muted);max-width:760px">Ingeniero Comercial con formación en economía, macrofinanzas y banca, interesado en la intersección entre finanzas, tecnología e innovación. Mi foco está en inversiones, macroeconomía y finanzas corporativas, incorporando herramientas de inteligencia artificial y análisis de datos para estudiar mercados, automatizar procesos y apoyar la toma de decisiones. Me interesa especialmente explorar cómo nuevas tecnologías desde IA hasta fintech y blockchain, están transformando la gestión de inversiones, el análisis financiero y los modelos de negocio</p>
+  <p style="color:var(--muted);max-width:760px">Ingeniero Comercial con formación en economía, macrofinanzas y banca, interesado en la intersección entre finanzas, tecnología e innovación. Mi foco está en inversiones, macroeconomía y finanzas corporativas, incorporando herramientas de inteligencia artificial y análisis de datos para estudiar mercados, automatizar procesos y apoyar la toma de decisiones. Me interesa especialmente explorar cómo las nuevas tecnologías, desde la IA hasta el fintech y el blockchain, están transformando la gestión de inversiones, el análisis financiero y los modelos de negocio.</p>
   <div class="chips">
     <span class="chip">Finanzas corporativas</span><span class="chip">Macroeconomía</span><span class="chip">Inversiones</span><span class="chip">Inteligencia artificial</span>
   </div>
@@ -224,6 +228,9 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px;bor
 <script>
 const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('show')),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const links=document.querySelectorAll('nav ul a');
+const so=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+x.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(el=>so.observe(el));
 </script>
 </body>
 </html>
