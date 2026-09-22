@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramón Mazuela Barría</title>
+<meta name="description" content="Ingeniero Comercial, Mención Economía — Universidad de Chile. Finanzas, macroeconomía y mercado de capitales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f17;--bg2:#111726;--card:#141b2d;--line:#222b40;
+  --text:#e6e9f0;--muted:#9aa4b8;--accent:#4fd1c5;--accent2:#7c9cff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.65;font-size:16px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.mono{font-family:"JetBrains Mono",monospace}
+nav{position:sticky;top:0;z-index:10;background:rgba(11,15,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;max-width:1000px;margin:auto}
+nav .logo{font-weight:700;color:var(--text)}
+nav .logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;font-size:14px}
+nav ul a{color:var(--muted)}
+nav ul a:hover{color:var(--accent);text-decoration:none}
+main{max-width:1000px;margin:auto;padding:0 20px}
+.hero{min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:60px 0}
+.hero .hi{color:var(--accent);font-size:15px;margin-bottom:12px}
+.hero h1{font-size:clamp(36px,7vw,64px);line-height:1.1;font-weight:700}
+.hero h2{font-size:clamp(20px,3.5vw,32px);color:var(--muted);font-weight:500;margin-top:10px}
+.hero p{max-width:620px;color:var(--muted);margin-top:24px}
+.btns{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.btn{border:1px solid var(--accent);color:var(--accent);padding:11px 22px;border-radius:8px;font-size:14px;font-weight:500;transition:.2s}
+.btn:hover{background:rgba(79,209,197,.1);text-decoration:none}
+.btn.fill{background:var(--accent);color:var(--bg)}
+.btn.fill:hover{background:#6ee0d6}
+section{padding:80px 0;border-top:1px solid var(--line)}
+.title{display:flex;align-items:center;gap:12px;font-size:28px;font-weight:700;margin-bottom:36px}
+.title .n{color:var(--accent);font-size:16px}
+.timeline{position:relative;padding-left:26px}
+.timeline:before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--accent2),transparent)}
+.item{position:relative;margin-bottom:36px}
+.item:before{content:"";position:absolute;left:-26px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.item .head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.item h3{font-size:19px}
+.item .org{color:var(--accent)}
+.item .date{color:var(--muted);font-size:13px}
+.item .role{color:var(--muted);font-size:15px;margin:2px 0 10px}
+.item ul{padding-left:18px;color:#c7cdd9}
+.item li{margin-bottom:5px}
+.item li::marker{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.card .ic{font-size:26px;margin-bottom:12px}
+.card h3{font-size:17px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14.5px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{font-size:12px;padding:4px 10px;border-radius:20px;background:rgba(124,156,255,.12);color:var(--accent2);font-family:"JetBrains Mono",monospace}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.skills h4{color:var(--accent);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.contact{text-align:center;max-width:560px;margin:auto}
+.contact p{color:var(--muted);margin-bottom:28px}
+.contact .btns{justify-content:center}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px;border-top:1px solid var(--line)}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:700px){nav ul{display:none}section{padding:60px 0}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#" class="logo">RM<span>.</span></a>
+  <ul>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</div></nav>
+
+<main>
+<header class="hero">
+  <div class="hi mono">Hola, mi nombre es</div>
+  <h1>Ramón Mazuela Barría</h1>
+  <h2>Ingeniero Comercial · Finanzas & Macroeconomía</h2>
+  <p>Ingeniero Comercial, mención Ciencias Económicas, de la Facultad de Economía y Negocios de la Universidad de Chile, con Minor en Macrofinanzas y Banca. Me interesan las finanzas, las inversiones, el mercado de capitales y la innovación financiera y sostenible, y uso data science e IA como herramientas para analizarlos.</p>
+  <div class="btns">
+    <a class="btn fill" href="#contacto">Contáctame</a>
+    <a class="btn" href="https://www.linkedin.com/in/ram%C3%B3n-mazuela-barr%C3%ADa-8b4698320/" target="_blank">LinkedIn</a>
+    <a class="btn" href="https://github.com/rmazuela10" target="_blank">GitHub</a>
+  </div>
+</header>
+
+<section id="sobre-mi" class="reveal">
+  <div class="title"><span class="n mono">01.</span>Sobre mí</div>
+  <p style="color:var(--muted);max-width:760px">Me motivan los desafíos intelectuales y el trabajo en equipo, y busco siempre generar confianza con las personas con quienes trabajo. Me interesan especialmente la macroeconomía, la renta fija y la innovación financiera (fintech y blockchain), y me gusta aplicar data science e IA al análisis de mercados y a la toma de decisiones estratégicas.</p>
+</section>
+
+<section id="experiencia" class="reveal">
+  <div class="title"><span class="n mono">02.</span>Experiencia</div>
+  <div class="timeline">
+    <div class="item">
+      <div class="head"><h3><span class="org">Club de Finanzas FEN</span></h3><span class="date mono">Abr 2026 — Actualidad</span></div>
+      <div class="role">Head of Research · Santiago, Chile</div>
+      <ul>
+        <li>Coordino el área de Research: defino temas, planifico publicaciones y hago seguimiento del trabajo del equipo.</li>
+        <li>Reviso informes (redacción y formato) y gestiono su publicación en las plataformas del club.</li>
+        <li>Administro archivos, plantillas y repositorios en GitHub, y paso los informes a LaTeX.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="head"><h3><span class="org">BICE Inversiones</span></h3><span class="date mono">Ene 2026 — Jun 2026</span></div>
+      <div class="role">Práctica Profesional · Sub-Gerencia de Renta Fija Extranjera</div>
+      <ul>
+        <li>Asistencia en el monitoreo y la gestión diaria de cajas de fondos.</li>
+        <li>Reporte diario de las operaciones de los fondos de renta fija extranjera.</li>
+        <li>Preparación de presentaciones para comités, reuniones internas y clientes externos.</li>
+        <li>Monitoreo diario de las condiciones macroeconómicas y de mercado, nacionales e internacionales.</li>
+        <li>Análisis de datos sobre el mercado de renta fija y los determinantes de la estrategia de inversión.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="head"><h3><span class="org">Cumplo</span></h3><span class="date mono">Jul 2024 — Dic 2024</span></div>
+      <div class="role">Práctica Intermedia · Cumplo Lab — Innovación</div>
+      <ul>
+        <li>Lideré una investigación sobre financiamiento con activos digitales y blockchain, que presenté al fundador y CEO.</li>
+        <li>Co-lideré el levantamiento de cuellos de botella en el SaaS operativo, lo que llevó a reuniones con distintos proveedores de software.</li>
+        <li>Actualización y validación de datos, y redacción del comentario mensual del reporte de productos de inversión (Cumplo y Puma Token).</li>
+        <li>Propuestas de negocio para posicionar a Cumplo en el mercado de sistemas de pago.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="formacion" class="reveal">
+  <div class="title"><span class="n mono">03.</span>Formación</div>
+  <div class="timeline">
+    <div class="item">
+      <div class="head"><h3><span class="org">Universidad de Chile — FEN</span></h3><span class="date mono">2021 — 2025</span></div>
+      <div class="role">Ingeniero Comercial, Mención Ciencias Económicas · Minor Macrofinanzas y Banca</div>
+      <ul>
+        <li>Ayudante de Finanzas II (Prof. Julio Rebolledo): valoración de empresas por DCF, financiamiento interno y estructura de capital.</li>
+        <li>Investigaciones académicas en riesgo de crédito, economía laboral e innovación financiera y sostenible (fintech).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos" class="reveal">
+  <div class="title"><span class="n mono">04.</span>Proyectos</div>
+  <div class="grid">
+    <div class="card"><div class="ic">⛓️</div><h3>Financiamiento con activos digitales</h3>
+      <p>Investigación sobre nuevas formas de financiamiento con blockchain, presentada al fundador y CEO de Cumplo.</p>
+      <div class="tags"><span class="tag">Blockchain</span><span class="tag">Fintech</span></div></div>
+    <div class="card"><div class="ic">🏘️</div><h3>Rentabilidad social de un proyecto comunitario</h3>
+      <p>Evaluación social de un proyecto para la Corporación para el Desarrollo de Santiago.</p>
+      <div class="tags"><span class="tag">Evaluación social</span><span class="tag">Excel</span></div></div>
+    <div class="card"><div class="ic">📊</div><h3>Investigación académica</h3>
+      <p>Trabajos en riesgo de crédito, economía laboral e innovación financiera y sostenible, con distintas metodologías.</p>
+      <div class="tags"><span class="tag">Stata</span><span class="tag">LaTeX</span><span class="tag">Econometría</span></div></div>
+    <div class="card"><div class="ic">🤖</div><h3>Dashboards y agentes con IA</h3>
+      <p>Tableros de mercado y agentes de IA construidos con Claude para automatizar análisis.</p>
+      <div class="tags"><span class="tag">IA</span><span class="tag">Claude</span><span class="tag">Dashboards</span></div></div>
+  </div>
+</section>
+
+<section id="actividades" class="reveal">
+  <div class="title"><span class="n mono">05.</span>Actividades</div>
+  <div class="grid">
+    <div class="card"><div class="ic">📈</div><h3>Club de Finanzas FEN</h3>
+      <p>Head of Research: coordino las publicaciones, los flashes económicos y los informes del club.</p></div>
+    <div class="card"><div class="ic">🎓</div><h3>Ayudantía Finanzas II</h3>
+      <p>Apoyo docente en valoración de empresas y estructura de capital.</p></div>
+    <div class="card"><div class="ic">✏️</div><h3>Profesor de Matemáticas</h3>
+      <p>Clases para estudiantes de primero y segundo medio (2022).</p></div>
+  </div>
+</section>
+
+<section id="habilidades" class="reveal">
+  <div class="title"><span class="n mono">06.</span>Habilidades</div>
+  <div class="skills">
+    <div class="card"><h4>Herramientas</h4><div class="tags"><span class="tag">Excel avanzado</span><span class="tag">PowerPoint</span><span class="tag">Stata</span><span class="tag">LaTeX / Overleaf</span><span class="tag">GitHub</span><span class="tag">Python (básico)</span></div></div>
+    <div class="card"><h4>Finanzas</h4><div class="tags"><span class="tag">Valoración DCF</span><span class="tag">Renta fija</span><span class="tag">Macroeconomía</span><span class="tag">Mercado de capitales</span><span class="tag">Fintech</span></div></div>
+    <div class="card"><h4>IA & Datos</h4><div class="tags"><span class="tag">Dashboards</span><span class="tag">Agentes con Claude</span><span class="tag">Análisis de datos</span></div></div>
+    <div class="card"><h4>Idiomas</h4><div class="tags"><span class="tag">Español (nativo)</span><span class="tag">Inglés (avanzado)</span></div></div>
+  </div>
+</section>
+
+<section id="contacto" class="reveal">
+  <div class="contact">
+    <div class="title" style="justify-content:center"><span class="n mono">07.</span>Contacto</div>
+    <p>¿Quieres conversar sobre finanzas, research o una oportunidad laboral? Escríbeme.</p>
+    <div class="btns">
+      <a class="btn fill" href="mailto:rmazuela@fen.uchile.cl">rmazuela@fen.uchile.cl</a>
+      <a class="btn" href="https://www.linkedin.com/in/ram%C3%B3n-mazuela-barr%C3%ADa-8b4698320/" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://github.com/rmazuela10" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="mono">© 2026 Ramón Mazuela Barría · Hecho con GitHub Pages</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('show')),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
