@@ -58,6 +58,14 @@ section{padding:80px 0;border-top:1px solid var(--line)}
 .card h3{font-size:17px;margin-bottom:8px}
 .card p{color:var(--muted);font-size:14.5px}
 .card .more{display:inline-block;margin-top:14px;font-size:13px}
+.interests{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:40px}
+.int{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;transition:.25s}
+.int:hover{transform:translateY(-4px);border-color:var(--accent)}
+.int .ic{font-size:26px;margin-bottom:10px}
+.int h3{font-size:16px;margin-bottom:6px}
+.int p{color:var(--muted);font-size:14px;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{border:1px solid var(--accent);color:var(--accent);background:rgba(79,209,197,.08);padding:6px 14px;border-radius:8px;font-size:14px;font-weight:500}
 .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .tag{font-size:12px;padding:4px 10px;border-radius:20px;background:rgba(124,156,255,.12);color:var(--accent2);font-family:"JetBrains Mono",monospace}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
@@ -91,16 +99,14 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px;bor
   <h1>Ramón Mazuela Barría</h1>
   <h2>Ingeniero Comercial · Finanzas & Macroeconomía</h2>
   <p>Ingeniero Comercial, mención Ciencias Económicas, de la Facultad de Economía y Negocios de la Universidad de Chile, con Minor en Macrofinanzas y Banca. Me interesan las finanzas, las inversiones, el mercado de capitales y la innovación financiera y sostenible, y uso data science e IA como herramientas para analizarlos.</p>
-  <div class="btns">
-    <a class="btn fill" href="#contacto">Contáctame</a>
-    <a class="btn" href="https://www.linkedin.com/in/ram%C3%B3n-mazuela-barr%C3%ADa-8b4698320/" target="_blank">LinkedIn</a>
-    <a class="btn" href="https://github.com/rmazuela10" target="_blank">GitHub</a>
-  </div>
 </header>
 
 <section id="sobre-mi" class="reveal">
   <div class="title"><span class="n mono">01.</span>Sobre mí</div>
   <p style="color:var(--muted);max-width:760px">Me motivan los desafíos intelectuales y el trabajo en equipo, y busco siempre generar confianza con las personas con quienes trabajo. Me interesan especialmente la macroeconomía, la renta fija y la innovación financiera (fintech y blockchain), y me gusta aplicar data science e IA al análisis de mercados y a la toma de decisiones estratégicas.</p>
+  <div class="chips">
+    <span class="chip">Finanzas corporativas</span><span class="chip">Macroeconomía</span><span class="chip">Inversiones</span><span class="chip">Inteligencia artificial</span>
+  </div>
 </section>
 
 <section id="experiencia" class="reveal">
@@ -156,13 +162,10 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px;bor
 <section id="proyectos" class="reveal">
   <div class="title"><span class="n mono">04.</span>Proyectos</div>
   <div class="grid">
-    <div class="card"><div class="ic">⛓️</div><h3>Financiamiento con activos digitales</h3>
-      <p>Investigación sobre nuevas formas de financiamiento con blockchain, presentada al fundador y CEO de Cumplo.</p>
-      <div class="tags"><span class="tag">Blockchain</span><span class="tag">Fintech</span></div></div>
     <div class="card"><div class="ic">🏘️</div><h3>Evaluación social: Santiago Cocina</h3>
       <p>Análisis de rentabilidad social de la cocina comunitaria de CORDESAN para microemprendedores chilenos y refugiados: marco lógico, análisis costo-beneficio, simulación de impacto y sensibilización.</p>
       <div class="tags"><span class="tag">ACB</span><span class="tag">Marco lógico</span><span class="tag">Evaluación de impacto</span></div>
-      <a class="more mono" href="docs%20github/Evaluaci%C3%B3n%20Proyecto%20Santiago%20Cocina%20FINAL%201.pdf" target="_blank">Ver informe →</a></div>
+      <a class="more mono" href="docs%20github/Santiago_Cocina.pdf" target="_blank">Ver informe →</a></div>
     <div class="card"><div class="ic">🌱</div><h3>Vertok: fintech verde</h3>
       <p>Propuesta de fintech sostenible, "del suelo al token": tokenización de terrenos forestales y créditos de carbono para conectar a inversionistas con proyectos de impacto climático.</p>
       <div class="tags"><span class="tag">Fintech</span><span class="tag">Tokenización</span><span class="tag">Créditos de carbono</span></div>
@@ -174,6 +177,9 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px;bor
     <div class="card"><div class="ic">🤖</div><h3>Dashboards y agentes con IA</h3>
       <p>Tableros de mercado y agentes de IA construidos con Claude para automatizar análisis.</p>
       <div class="tags"><span class="tag">IA</span><span class="tag">Claude</span><span class="tag">Dashboards</span></div></div>
+    <div class="card"><div class="ic">⛓️</div><h3>Financiamiento con activos digitales</h3>
+      <p>Investigación sobre nuevas formas de financiamiento con blockchain, presentada al fundador y CEO de Cumplo.</p>
+      <div class="tags"><span class="tag">Blockchain</span><span class="tag">Fintech</span></div></div>
   </div>
 </section>
 
@@ -181,7 +187,8 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px;bor
   <div class="title"><span class="n mono">05.</span>Actividades</div>
   <div class="grid">
     <div class="card"><div class="ic">📈</div><h3>Club de Finanzas FEN</h3>
-      <p>Head of Research: coordino las publicaciones, los flashes económicos y los informes del club.</p></div>
+      <p>Head of Research: coordino las publicaciones, los flashes económicos y los informes del club.</p>
+      <a class="more mono" href="https://club-de-finanzas-fen.github.io/" target="_blank">Visitar sitio del club →</a></div>
     <div class="card"><div class="ic">🎓</div><h3>Ayudantía Finanzas II</h3>
       <p>Apoyo docente en valoración de empresas y estructura de capital.</p></div>
     <div class="card"><div class="ic">✏️</div><h3>Profesor de Matemáticas</h3>
