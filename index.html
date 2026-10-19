@@ -60,16 +60,8 @@ section{padding:80px 0;border-top:1px solid var(--line)}
 .card h3{font-size:17px;margin-bottom:8px}
 .card p{color:var(--muted);font-size:14.5px}
 .card .more{display:inline-block;margin-top:14px;font-size:13px}
-.feature{grid-column:1/-1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:18px;transition:.25s}
-.feature:hover{border-color:var(--accent)}
-.feature .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
-.feature h3{font-size:19px;margin-bottom:8px}
-.feature p{color:var(--muted);font-size:14.5px;max-width:680px}
-.feature .badge{font-size:11.5px;color:var(--accent);border:1px solid var(--accent);border-radius:20px;padding:3px 10px;white-space:nowrap}
-.frame{margin-top:18px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0b0e14}
-.frame iframe{display:block;width:100%;height:640px;border:0}
-.feature .btns{margin-top:18px}
-@media(max-width:800px){.frame{display:none}}
+.subtitle{font-size:15px;font-weight:600;color:var(--accent2);letter-spacing:.06em;text-transform:uppercase;margin:0 0 16px}
+.grid+.subtitle{margin-top:40px}
 .interests{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:40px}
 .int{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;transition:.25s}
 .int:hover{transform:translateY(-4px);border-color:var(--accent)}
@@ -175,36 +167,36 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:40px 20px;bor
 
 <section id="proyectos" class="reveal">
   <div class="title"><span class="n mono">04.</span>Proyectos</div>
-  <div class="feature">
-    <div class="top">
-      <div><div class="ic" style="font-size:26px;margin-bottom:10px">🌾</div><h3>Dashboard de mercados agro con IA</h3></div>
-      <span class="badge mono">Construido con Claude</span>
-    </div>
-    <p>Tablero de inteligencia de mercado para la agroindustria con 14 variables: commodities (maíz, trigo, soya, avena, azúcar, Brent), tipos de cambio (CLP, BRL, PEN, DXY) y derivados como harina y aceite de soya y DDGS. Incluye rendimientos comparados, histórico de hasta 5 años, correlaciones de retornos, correlación móvil por ventanas, comparador de series y exportación a CSV.</p>
-    <div class="tags"><span class="tag">IA</span><span class="tag">Commodities</span><span class="tag">Correlaciones</span><span class="tag">React</span><span class="tag">Datos públicos</span></div>
-    <div class="frame"><iframe src="dashboard-agro.html" title="Dashboard de mercados agro" loading="lazy"></iframe></div>
-    <div class="btns"><a class="btn fill" href="dashboard-agro.html" target="_blank">Abrir dashboard en pantalla completa →</a></div>
+  <h3 class="subtitle">Proyectos de IA</h3>
+  <div class="grid">
+    <div class="card"><div class="ic">🌾</div><h3>Dashboard de mercados agro con IA</h3>
+      <p>Tablero construido con Claude que sigue 14 variables de la agroindustria (granos, azúcar, Brent, tipos de cambio y derivados de soya), con rendimientos, histórico de hasta 5 años y correlaciones entre series.</p>
+      <div class="tags"><span class="tag">IA</span><span class="tag">Commodities</span><span class="tag">Correlaciones</span></div>
+      <a class="more mono" href="dashboard-agro.html" target="_blank">Ver dashboard →</a></div>
+    <div class="card"><div class="ic">🤖</div><h3>Dashboards y agentes con IA</h3>
+      <p>Tableros de mercado y agentes de IA construidos con Claude para automatizar análisis.</p>
+      <div class="tags"><span class="tag">IA</span><span class="tag">Claude</span><span class="tag">Dashboards</span></div></div>
   </div>
+  <h3 class="subtitle">Ideas innovadoras</h3>
+  <div class="grid">
+    <div class="card"><div class="ic">🌱</div><h3>Vertok: fintech verde</h3>
+      <p>Propuesta de fintech sostenible, "del suelo al token": tokenización de terrenos forestales y créditos de carbono para conectar a inversionistas con proyectos de impacto climático.</p>
+      <div class="tags"><span class="tag">Fintech</span><span class="tag">Tokenización</span><span class="tag">Créditos de carbono</span></div>
+      <a class="more mono" href="docs%20github/Fintech%20Vertok.pdf" target="_blank">Ver presentación →</a></div>
+    <div class="card"><div class="ic">⛓️</div><h3>Financiamiento con activos digitales</h3>
+      <p>Investigación sobre nuevas formas de financiamiento con blockchain, presentada al fundador y CEO de Cumplo.</p>
+      <div class="tags"><span class="tag">Blockchain</span><span class="tag">Fintech</span></div></div>
+  </div>
+  <h3 class="subtitle">Proyectos académicos</h3>
   <div class="grid">
     <div class="card"><div class="ic">🏘️</div><h3>Evaluación social: Santiago Cocina</h3>
       <p>Análisis de rentabilidad social de la cocina comunitaria de CORDESAN para microemprendedores chilenos y refugiados: marco lógico, análisis costo-beneficio, simulación de impacto y sensibilización.</p>
       <div class="tags"><span class="tag">ACB</span><span class="tag">Marco lógico</span><span class="tag">Evaluación de impacto</span></div>
       <a class="more mono" href="docs%20github/EVS%20Santiago%20Cocina.pdf" target="_blank">Ver informe →</a></div>
-    <div class="card"><div class="ic">🌱</div><h3>Vertok: fintech verde</h3>
-      <p>Propuesta de fintech sostenible, "del suelo al token": tokenización de terrenos forestales y créditos de carbono para conectar a inversionistas con proyectos de impacto climático.</p>
-      <div class="tags"><span class="tag">Fintech</span><span class="tag">Tokenización</span><span class="tag">Créditos de carbono</span></div>
-      <a class="more mono" href="docs%20github/Fintech%20Vertok.pdf" target="_blank">Ver presentación →</a></div>
     <div class="card"><div class="ic">💳</div><h3>Riesgo de crédito con data alternativa</h3>
       <p>Modelo logit que usa patrones de consumo (EPF) junto con data tradicional (EFH), emparejadas con propensity score matching, para predecir el impago de hogares bancarizados y no bancarizados. Los modelos combinados superan un AUC de 0,90.</p>
       <div class="tags"><span class="tag">Logit</span><span class="tag">PSM</span><span class="tag">AUC-ROC</span><span class="tag">Stata</span></div>
       <a class="more mono" href="docs%20github/Paper%20Final%20Riesgo.pdf" target="_blank">Ver paper →</a></div>
-    <div class="card"><div class="ic">🤖</div><h3>Dashboards y agentes con IA</h3>
-      <p>Tableros de mercado y agentes de IA construidos con Claude para automatizar análisis.</p>
-      <div class="tags"><span class="tag">IA</span><span class="tag">Claude</span><span class="tag">Dashboards</span></div>
-      <a class="more mono" href="dashboard-agro.html" target="_blank">Ver dashboard agro →</a></div>
-    <div class="card"><div class="ic">⛓️</div><h3>Financiamiento con activos digitales</h3>
-      <p>Investigación sobre nuevas formas de financiamiento con blockchain, presentada al fundador y CEO de Cumplo.</p>
-      <div class="tags"><span class="tag">Blockchain</span><span class="tag">Fintech</span></div></div>
   </div>
 </section>
 
